@@ -3,6 +3,8 @@
 Direct flow
 ****************************
 
+Fredrik Bach er kongen
+
 This is an integration pattern suited for senders with their own portals and web solutions, wishing to offer a seamless signing experience as a part of a process where the user is logged in through a senders web portal. The signature prosess will be perceived as an integrated part of the user flow. The user will be redirected to the senders website after the signing is completed. For more information of the flow, please see :ref:`signering-i-direkteflyt`.
 
 To ease the integration, we provide C# and Java libraries. If you are creating your own client, you will have to interact directly with the API. The message format of the API is XML, and relevant types can be found in `direct.xsd <https://github.com/digipost/signature-api-specification/blob/master/schema/xsd/direct.xsd>`_.
