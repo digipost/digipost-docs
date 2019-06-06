@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Posten signering documentation'
+project = u'Digipost documentation'
 copyright = u'2019, Posten Norge AS'
 author = u'Posten Norge AS'
 
