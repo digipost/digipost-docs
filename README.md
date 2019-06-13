@@ -1,8 +1,8 @@
-# [Posten signering](https://signering.posten.no) documentation site
+# [Digipost](https://digipost.no) documentation site
 
-Sources for building the documentation site at [signering-docs.readthedocs.io](https://signering-docs.readthedocs.io)
+Sources for building the documentation site at [digipost-docs.readthedocs.io](https://digipost-docs.readthedocs.io)
 
-[![Documentation Status](https://readthedocs.org/projects/signering-docs/badge/?version=latest)](https://signering-docs.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/digipost-docs/badge/?version=latest)](https://digipost-docs.readthedocs.io/en/latest/?badge=latest)
 
 ## ✅ Prerequisites
 
