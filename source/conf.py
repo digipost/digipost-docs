@@ -126,7 +126,7 @@ suppress_warnings = ['image.nonlocal_uri']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Postensigneringdocumentationdoc'
+htmlhelp_basename = 'Digipostdocumentationdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -153,7 +153,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Postensigneringdocumentation.tex', u'Posten signering documentation Documentation',
+    (master_doc, 'Digipostdocumentation.tex', u'Digipost documentation Documentation',
      u'Posten Norge AS', 'manual'),
 ]
 
@@ -163,7 +163,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'postensigneringdocumentation', u'Posten signering documentation Documentation',
+    (master_doc, 'digipostdocumentation', u'Digipost documentation Documentation',
      [author], 1)
 ]
 
@@ -174,8 +174,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Postensigneringdocumentation', u'Posten signering documentation Documentation',
-     author, 'Postensigneringdocumentation', 'One line description of project.',
+    (master_doc, 'Digipostdocumentation', u'Digipost documentation Documentation',
+     author, 'Digipostdocumentation', 'One line description of project.',
      'Miscellaneous'),
 ]
 

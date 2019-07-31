@@ -1,28 +1,28 @@
-..  _kom-i-gang:
+..  _get-started:
 
 ..  DANGER::
     Dette nettstedet er under arbeid. Vennligst se https://www.digipost.no/plattform for oppdatert Digipost teknisk dokumentasjon.
 
-Kom i gang med API-et til Digipost på 1-2-3
-********************************************
+Get started with Digipost in 1-2-3
+**********************************
 
-Det er veldig enkelt å integrere med Digipost og sende ditt første brev. Vi foreslår at du benytter et av våre klientbiblioteker for å komme raskt igang. Følgende tre steg er alt som må til:
+It is really easy to integrate with Digipost and send your first digital mail. Vi suggest you use one of our client libraries to get started. Follow these three simple steps:
 
-1. Registrer deg for sending i Digipost
-________________________________________
+1. Get registered as a Digipost sender
+______________________________________
 
-Alle virksomheter som ønsker å sende brev i Digipost må ha en virksomhetskonto. Du kan få tilgang til en test-konto ved å sende en e-post til support@digipost.no med følgende informasjon:
+All organisations that wish to send digital mail must have a Digipost organisation (sender) account. To get a test account, send an email to support@digipost.no with the following information:
 
-- Navn på virksomheten
-- Organisasjonsnummer
-- Telefonnummer
-- E-postadresse
-- Digipostadressene til de som skal ha tilgang
+- Organisastion name
+- Organisation number
+- Telephone number
+- Email address
+- Email address
 
-2. Ta i bruk Digipost klientbibliotek for ditt språk
-_____________________________________________________
+2. Choose between the Java or .NET Digipost client libraries
+____________________________________________________________
 
-Ta i bruk klientbiblioteket for enten Java eller .NET slik at du kan enkelt integrere med Digipost som avsender. Du kan selvsagt også gjøre en manuell integrasjon mot selve APIet, men vi anbefaler at du benytter våre klientbibliotek.
+Use the Digipost client library in either Java or .NET to send requests to the Digipost API. You can also integrate directly with the API, but we recommend using a client library.
 
 .. tabs::
 
@@ -34,10 +34,10 @@ Ta i bruk klientbiblioteket for enten Java eller .NET slik at du kan enkelt inte
 
       http://search.maven.org/#search%7Cga%7C1%7Cdigipost-api-client-java
 
-3. Bruk Digipost klientbiblioteket fra din kode
-________________________________________________
+3. Call Digipost client library code from your code
+___________________________________________________
 
-Det er ikke mange kodelinjer som skal til for å sende brev. Koden nedenfor viser hva som skal til for å sende et brev. Det er naturlig nok mange flere muligheter i klientbibliotekene og APIene til Digipost, men dette er en enkel introduksjon som lar deg sende et standard brev til én mottaker i Digipost.
+All it takes is a few lines of code to send digital mail. The following code shows a bare bones example of how to do this. There are many other options and possibilities in the client libraries and Digipost API, but the below is quick introduction to how sending a letter to a Digipost recipient works.
 
 ..  tabs::
 
@@ -45,8 +45,8 @@ Det er ikke mange kodelinjer som skal til for å sende brev. Koden nedenfor vise
 
         ..  code-block:: c#
 
-			// 1. Initialiser konfig med din Digipost avsender id
-			// Avsender id finner du på digipost.no/bedrift
+			// 1. Initialise config with your Digipost sender id
+			// You can find your sender id at digipost.no/bedrift
 			var config = new ClientConfig(senderId: "xxxxx", environment: Environment.Production);
 
 			// 2. Initialiser klient med thumbprint til sertifikat som er knyttet til din Digipost virksomhetskonto
