@@ -49,42 +49,42 @@ All it takes is a few lines of code to send digital mail. The following code sho
 			// You can find your sender id at digipost.no/bedrift
 			var config = new ClientConfig(senderId: "xxxxx", environment: Environment.Production);
 
-			// 2. Initialiser klient med thumbprint til sertifikat som er knyttet til din Digipost virksomhetskonto
-			// Virksomhetssertifikat knyttes til din Digipost konto på digipost.no/bedrift.
-			// Informasjon om bruk av thumbprints finnes på http://digipost.github.io/digipost-api-client-dotnet/#installcert.
+			// 2. Initialise client with your certificates thumbprint which is connected to your Digipost organisation account
+			// You can upload your certificate at digipost.no/bedrift.
+			// See http://digipost.github.io/digipost-api-client-dotnet/#installcert for further information on thumbprints
 			var client = new DigipostClient(config, thumbprint: "84e492a972b7e...");
 
-			// 3. Lag melding med bruk av fødselsnummer som personidentifikator
+			// 3. Create message by using personal identification number as identification mechanism
 			var message = new Message(
 				new RecipientById(IdentificationType.PersonalIdentificationNumber, "00000000000"),
 				new Document(subject: "Dokumentets emne", fileType: "pdf", path: @"c:\...\dokument.pdf")
 			);
 
-			// 4. Send melding
+			// 4. Send message
 			var result = client.SendMessage(message);
 
     ..  group-tab:: Java
 
         ..  code-block:: java
 
-			// 1. Les inn sertifikatet du har knyttet til din Digipost-konto (i .p12-formatet)
+			// 1. Read the certificate that is tied to your Digipost organisation account (in .p12 format)
 			InputStream sertifikatInputStream = new FileInputStream("certificate.p12");
 
-			// 2. Opprett en DigipostClient
+			// 2. Create a DigipostClient
 			DigipostClient client = new DigipostClient(DigipostClientConfigBuilder.newBuilder().build(), ATOMIC_REST, "https://api.digipost.no", AVSENDERS_KONTOID, sertifikatInputStream, SERTIFIKAT_PASSORD);
 
-			// 3. Opprett et fødselsnummerobjekt
+			// 3. Create a personal identification number object
 			PersonalIdentificationNumber pin = new PersonalIdentificationNumber("26079833787");
 
-			// 4. Opprett hoveddokumentet
+			// 4. Create primary document object
 			Document primaryDocument = new Document(UUID1, "Dokumentets emne", PDF);
 
-			// 5. Opprett en forsendelse
+			// 5. Create message object
 			Message message = newMessage(UUID2, primaryDocument)
 				.personalIdentificationNumber(pin)
 				.build();
 
-			// 6. Legg til innhold og send
+			// 6. Add content to message and send message
 			client.createMessage(message)
 				.addContent(primaryDocument, new FileInputStream("content.pdf"))
 				.send();
