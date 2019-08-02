@@ -1,10 +1,10 @@
 ..  _api-reference:
 
 API Reference
-**************
+*************
 
 HTTP headers
-______________
+____________
 
 The following http headers are used in the Digipost API.
 

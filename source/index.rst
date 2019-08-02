@@ -19,7 +19,6 @@ Digipost technical documentation
    :caption: Digipost API
 
    api/introduction
-   api/v7-changes
    api/security
    api/certificates
    api/schemas
